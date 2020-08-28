@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  package="org.stoyicker.dinger.iaps">
+
+  <application>
+    <provider
+      android:name="iaps.BillingContentProvider"
+      android:authorities="@string/provider_authority_iaps"
+      android:exported="true"
+      android:permission="iaps"
+      android:syncable="false" />
+  </application>
+  <permission
+    android:name="iaps"
+    android:protectionLevel="signature" />
+
+  <uses-permission android:name="iaps" />
+</manifest>

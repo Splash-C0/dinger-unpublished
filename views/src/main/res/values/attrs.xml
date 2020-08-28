@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="RoundCornerImageView">
+    <attr name="cornerRadius" format="dimension" />
+  </declare-styleable>
+  <declare-styleable name="AppCompat23SeekBar">
+    <attr name="min" format="integer" />
+  </declare-styleable>
+</resources>

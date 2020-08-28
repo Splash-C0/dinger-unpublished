@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="facebook_app_id" translatable="false">464891386855067</string>
+  <string name="fb_login_protocol_scheme" translatable="false">fb464891386855067</string>
+  <string name="preference_key_about_the_app" translatable="false">about_the_app</string>
+  <string name="preference_key_privacy_policy" translatable="false">privacy_policy</string>
+  <string name="preference_key_manage_notifications" translatable="false">manage_notifications</string>
+  <string name="preference_key_logout" translatable="false">logout</string>
+  <string name="preference_key_share" translatable="false">share</string>
+  <string name="preference_key_rated_on_google_play" translatable="false">preference_key_rated_on_google_play</string>
+  <string name="market_intent_template" translatable="false"><![CDATA[market://details?id=%s]]></string>
+  <string name="market_link_template" translatable="false"><![CDATA[http://play.google.com/store/apps/details?id=%s]]></string>
+  <string name="tinder_app_label" translatable="false">Tinder</string>
+  <string name="url_dont_kill_my_app" translatable="false">https://dontkillmyapp.com/</string>
+  <string name="url_google_play_entry" translatable="false">https://play.google.com/store/apps/details?id=org.stoyicker.dinger</string>
+  <string name="url_privacy_policy" translatable="false">http://stoyicker.github.io/dinger-public/privacy_policy.html</string>
+</resources>

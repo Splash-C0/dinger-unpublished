@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:animateLayoutChanges="true">
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/logo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/layout_spacing_large"
+    android:scaleType="centerInside"
+    app:layout_constraintBottom_toTopOf="@id/container_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/ic_launcher_big" />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/container_content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/layout_spacing_large"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/logo">
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/login_hint_via_tinder"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:justificationMode="inter_word"
+      android:text="@string/login_hint_via_tinder"
+      android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/login_with_facebook"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:justificationMode="inter_word"
+      android:text="@string/login_with_facebook"
+      android:textColor="@android:color/black"
+      android:textStyle="bold"
+      app:backgroundTint="@color/accent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/login_hint_via_tinder" />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/login_with_sms"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:justificationMode="inter_word"
+      android:text="@string/login_with_sms"
+      android:textColor="@android:color/black"
+      android:textStyle="bold"
+      android:enabled="false"
+      android:alpha="0.5"
+      app:backgroundTint="@color/accent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/login_with_facebook" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@drawable/background_chip"
+      android:textColor="@color/text_primary"
+      android:clickable="false"
+      android:elevation="8dp"
+      android:padding="@dimen/layout_spacing_xtra_small"
+      android:text="@string/temporarily_unavailable"
+      android:textSize="@dimen/text_size_chip"
+      android:alpha="0.9"
+      app:layout_constraintEnd_toEndOf="@id/login_with_sms"
+      app:layout_constraintTop_toTopOf="@id/login_with_sms" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/login_hint_tinder_install_not_needed"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:justificationMode="inter_word"
+      android:text="@string/login_hint_tinder_install_not_needed"
+      android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/login_with_sms" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <androidx.core.widget.ContentLoadingProgressBar
+    android:id="@+id/progress"
+    style="?android:attr/progressBarStyleHorizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:indeterminate="true"
+    android:visibility="invisible"
+    app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

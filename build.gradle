@@ -1,0 +1,30 @@
+plugins {
+  id "base"
+  id "com.github.ben-manes.versions" version "0.27.0"
+}
+
+dependencyUpdates {
+  gradleReleaseChannel = "current"
+  doFirst {
+    repositories {
+      google()
+      jcenter()
+      mavenCentral()
+    }
+  }
+  rejectVersionIf {
+    ["jsr250-api",
+     "lint-gradle",
+     "aapt2",
+     "lottie",
+     "moshi",
+     "moshi-adapters"].contains(it.candidate.moduleIdentifier.name) ||
+        it.candidate.version.contains("alpha") ||
+        it.candidate.version.contains("beta") ||
+        it.candidate.version.contains("rc")
+  }
+}
+
+clean.doFirst {
+  delete "$rootDir/build"
+}

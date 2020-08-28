@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="com_accountkit_account_verified" gender="unknown">Akaunti imethibitishwa!</string>
+  <string name="com_accountkit_button_begin" gender="unknown">Anza</string>
+  <string name="com_accountkit_button_cancel" gender="unknown">Katisha</string>
+  <string name="com_accountkit_button_confirm" gender="unknown">Thibitisha</string>
+  <string name="com_accountkit_button_continue" gender="unknown">Endelea</string>
+  <string name="com_accountkit_button_edit" gender="unknown">HARIRI</string>
+  <string name="com_accountkit_button_log_in" gender="unknown">Ingia</string>
+  <string name="com_accountkit_button_next" gender="unknown">Inayofuata</string>
+  <string name="com_accountkit_button_ok" gender="unknown">SAWA</string>
+  <string name="com_accountkit_button_resend_code_countdown" gender="unknown">Tuma upya msimbo kwa SMS baada ya %1$d</string>
+  <string name="com_accountkit_button_resend_code_in" gender="unknown">Tuma SMS tena kwenye %1$d</string>
+  <string name="com_accountkit_button_resend_sms" gender="unknown">Tuma SMS Tena</string>
+  <string name="com_accountkit_button_resend_sms_code" gender="unknown">Tuma upya msimbo wa SMS</string>
+  <string name="com_accountkit_button_resend_whatsapp" gender="unknown">Tuma upya msimbo kwenye WhatsApp</string>
+  <string name="com_accountkit_button_send" gender="unknown">Tuma</string>
+  <string name="com_accountkit_button_send_code_in_call" gender="unknown">Pata Simu</string>
+  <string name="com_accountkit_button_send_code_in_fb" gender="unknown">Pata Msimbo kwenye Facebook</string>
+  <string name="com_accountkit_button_send_code_in_fb_details" gender="unknown">Msimbo utafika kama taarifa ya Facebook</string>
+  <string name="com_accountkit_button_send_code_in_sms" gender="unknown">Pata Msimbo wa SMS</string>
+  <string name="com_accountkit_button_send_code_in_sms_details" gender="unknown">Pata ujumbe wa matini ulio na msimbo wako.</string>
+  <string name="com_accountkit_button_send_code_in_whatsapp" gender="unknown">Pata Msimbo wa WhatsApp</string>
+  <string name="com_accountkit_button_send_code_in_whatsapp_details" gender="unknown">Pata ujumbe uliotumwa kwa WhatsApp ulio na msimbo wako.</string>
+  <string name="com_accountkit_button_send_code_through_fb" gender="unknown">Pata Msimbo kwenye Facebook</string>
+  <string name="com_accountkit_button_send_code_through_fb_details" gender="unknown">Itafika kama taarifa ya Facebook</string>
+  <string name="com_accountkit_button_start" gender="unknown">Anza</string>
+  <string name="com_accountkit_button_start_over" gender="unknown">Jaribu Tena</string>
+  <string name="com_accountkit_button_submit" gender="unknown">Wasilisha</string>
+  <string name="com_accountkit_button_use_sms" gender="unknown">Tumia SMS</string>
+  <string name="com_accountkit_button_use_whatsapp_icon" gender="unknown">Tumia ◯</string>
+  <string name="com_accountkit_check_email" gender="unknown">Fungua Barua pepe yako</string>
+  <string name="com_accountkit_code_change_number" gender="unknown">Badilisha Nambari</string>
+  <string name="com_accountkit_code_phonenumber_and_change" gender="unknown">%1$s. Badilisha Nambari</string>
+  <string name="com_accountkit_code_sent_to" gender="unknown">Thibitisha nambari yako ya simu %1$s</string>
+  <string name="com_accountkit_code_sent_to_verify" gender="unknown">Thibitisha nambari yako ya simu ya mkonoi</string>
+  <string name="com_accountkit_confirmation_code_agreement" gender="unknown">Donoa %1$s ili kukubali Masharti &lt;a href=%2$s>ya Facebook&lt;/a>, &lt;a href=%3$s>Sera ya Data&lt;/a>na &lt;a href=%4$s>kidakuzi inatumia&lt;/a>.</string>
+  <string name="com_accountkit_confirmation_code_agreement_app_privacy_policy" gender="unknown">Donoa %1$s ili kukubali Masharti &lt;a href=%2$s>ya Facebook&lt;/a>, &lt;a href=%3$s>Sera ya Daata&lt;/a>, &lt;a href=%4$s>kidakuzi kinatumia&lt;/a> na &lt;a href=%5$s>Sera ya Faragha&lt;/a> of %6$s.</string>
+  <string name="com_accountkit_confirmation_code_agreement_app_privacy_policy_and_terms" gender="unknown">Donoa %1$s ili kukubali Masharti &lt;a href=%2$s>ya Facebook&lt;/a>, &lt;a href=%3$s>Sera ya Data&lt;/a>, &lt;a href=%4$s>kidakuzi kinatumia&lt;/a> na &lt;a href=%5$s>Sera ya Faragha&lt;/a> na &lt;a href=%6$s>Masharti ya Huduma&lt;/a> ya %7$s.</string>
+  <string name="com_accountkit_confirmation_code_agreement_app_privacy_policy_and_terms_instant_verification" gender="unknown">Donoa %1$s ili kukubali Masharti &lt;a href=%2$s>ya Facebook&lt;/a>, &lt;a href=%3$s>Sera ya Faragha&lt;/a>, &lt;a href=%4$s>kidakuzi kinatumia&lt;/a> na &lt;a href=%5$s>Sera ya Faragha&lt;/a> na &lt;a href=%6$s>Masharti ya Huduma&lt;/a> ya %7$s. &lt;a href=%8$s>Jifunze zaidi&lt;/a> kuhusu jinsi akaunti yako ilithibitishwa.</string>
+  <string name="com_accountkit_confirmation_code_agreement_app_privacy_policy_instant_verification" gender="unknown">Donoa %1$s ili kukubali &lt;a href=%2$sya Facebook na Masharti&lt;/a>, &lt;a href=%3$s>Sera ya Data&lt;/a>, &lt;a href=%4$s>kidakuzi kinatumia&lt;/a> na &lt;a href=%5$s>Sera ya Faragha&lt;/a> ya %6$s. &lt;a href=%7$s>Jifunze zaidi kuhusu&lt;/a> kuhusu jinsi akaunti yako ilithibitishwa.</string>
+  <string name="com_accountkit_confirmation_code_agreement_instant_verification" gender="unknown">Donoa %1$s ili kukubali masharti &lt;a href=%2$s>ya Facebook&lt;/a>, &lt;a href=%3$s>Sera ya Data&lt;a href=%4$s> na vidakuzi &lt;a href=%5$s>tumia&lt;/a>. &lt;a href=%5$s>Jifunze zaidi&lt;/a> kuhusu akaunti yako.</string>
+  <string name="com_accountkit_confirmation_code_text" gender="unknown">Sikupata msimbo</string>
+  <string name="com_accountkit_confirmation_code_title" gender="unknown">Ingiza msimbo wako</string>
+  <string name="com_accountkit_email_invalid" gender="unknown">Barua pepe hii sio sahihi. Tafadhali jaribu tena.</string>
+  <string name="com_accountkit_email_loading_title" gender="unknown">Inathibitisha anwani yako ya barua pepe...</string>
+  <string name="com_accountkit_email_login_retry_title" gender="unknown">Thibitisha barua pepe yako</string>
+  <string name="com_accountkit_email_login_text" gender="unknown">Donoa %1$s ili kupata uthibitisho wa barua pepe kutoka kwa Account Kit kwa Facebook ili kutumia %2$s. Huhitaji akaunti ya Facebook ili kuitumia. &lt;a href=%3$s> Jifunze jinsi Facebook hutumia maelezo yako &lt;/a>.</string>
+  <string name="com_accountkit_email_login_title" gender="unknown">Ingiza anwani yako ya barua pepe</string>
+  <string name="com_accountkit_email_not_received" gender="unknown">Tuma tena Barua pepe</string>
+  <string name="com_accountkit_email_verify_title" gender="unknown">Fungua barua na uthibitishe anwani yako ya barua pepe</string>
+  <string name="com_accountkit_enter_code_sent_to" gender="unknown">Ingiza msimbo ambao ulitumwa kwa %1$s</string>
+  <string name="com_accountkit_error_title" gender="unknown">Tatizo la mfumo limetokea. Tafadhali jaribu tena.</string>
+  <string name="com_accountkit_facebook_code_entry_title" gender="unknown">Ingiza msimbo wako kutoka kwa Facebook</string>
+  <string name="com_accountkit_logging_in" gender="unknown">Inaingia...</string>
+  <string name="com_accountkit_other_ways_to_get_code" gender="unknown">Njia zingine za kupta msimbo:</string>
+  <string name="com_accountkit_phone_error_title" gender="unknown">Tafadhali ingiza nambari halali ya simu.</string>
+  <string name="com_accountkit_phone_loading_title" gender="unknown">Inathibitisha nambari yako...</string>
+  <string name="com_accountkit_phone_login_retry_title" gender="unknown">Thibitisha nambari yako ya simu</string>
+  <string name="com_accountkit_phone_login_text" gender="unknown">Donoa %1$s ili kuthibitisha akaunti yako kwa Account Kit inayoendeshwa na Facebook. Huhitaji akaunti ya Facebook ili kutumia Account Kit. SMS inaweza kutumwa ili kuthibitisha nambari yako. Viwango vya ujumbe na data vinaweza kutumika. &lt;a href=%2$s>Jifunze jinsi Facebook hutumia maelezo yako ya &lt;/a>.</string>
+  <string name="com_accountkit_phone_login_title" gender="unknown">Ingiza nambari yako ya simu</string>
+  <string name="com_accountkit_phone_sending_code_on_fb_title" gender="unknown">Inatuma msimbo kwenye Facebook...</string>
+  <string name="com_accountkit_phone_update_title" gender="unknown">Ingiza nambari yako mpya ya simu ya mkononi</string>
+  <string name="com_accountkit_phone_whatsapp_login_text" gender="unknown">%1$s hutumia Account Kit, teknolojia ya Facebook, kukusaidia kuingia. Huhitaji akaunti ya Facebook. Viwango vya ujumbe na data vitatekelezwa. &lt;a href=%2$s>Jifunze jinsi ambavyo Facebook hutumia maelezo yako&lt;/a>.</string>
+  <string name="com_accountkit_resend_check" gender="unknown">Angalia kikasha pokezi chako cha SMS</string>
+  <string name="com_accountkit_resend_check_enter_code" gender="unknown">Ingiza Msimbo</string>
+  <string name="com_accountkit_resend_check_sms" gender="unknown">Angalia kikasha pokezi chako cha SMS</string>
+  <string name="com_accountkit_resend_check_whatsapp" gender="unknown">Angalia ujumbe wako wa WhatsApp</string>
+  <string name="com_accountkit_resend_email_text" gender="unknown">Tuma Barua pepe Mpya</string>
+  <string name="com_accountkit_resend_switch_sms" gender="unknown">Pata msimbo wa SMS</string>
+  <string name="com_accountkit_resend_switch_sms_detail" gender="unknown">Pata ujumbe wa matini ulio na msimbo wako.</string>
+  <string name="com_accountkit_resend_switch_whatsapp" gender="unknown">Pata msimbo wa WhatsApp</string>
+  <string name="com_accountkit_resend_switch_whatsapp_detail" gender="unknown">Pata ujumbe uliotumwa kwa WhatsApp ulio na msimbo wako.</string>
+  <string name="com_accountkit_resend_title" gender="unknown">Iwapo hujapata msimbo:</string>
+  <string name="com_accountkit_return_title" gender="unknown">Inakurudisha kwenye %1$s...</string>
+  <string name="com_accountkit_sent_title" gender="unknown">Imetumwa!</string>
+  <string name="com_accountkit_success_title" gender="unknown">Imethibitishwa!</string>
+  <string name="com_accountkit_toolbar_title" gender="unknown">Ingia kwenye %1$s</string>
+  <string name="com_accountkit_verify_confirmation_code_title" gender="unknown">Tusingethibitisha msimbo wako. Tafadhali jaribu tena:</string>
+  <string name="com_accountkit_verify_confirmation_code_title_colon" gender="unknown">Tusingethibitisha msimbo wako. Tafadhali jaribu tena:</string>
+  <string name="com_accountkit_verify_title" gender="unknown">Inathibitisha msimbo wako...</string>
+</resources>

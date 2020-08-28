@@ -1,0 +1,41 @@
+buildscript {
+  apply from: "${rootProject.rootDir}/_buildsystem/buildscript.gradle"
+  repositories project.ext.classpathRepositories
+  dependencies project.ext.classpathDependencies
+}
+
+apply from: "${rootProject.rootDir}/_buildsystem/configurations.gradle"
+apply from: "${rootProject.rootDir}/_buildsystem/dependencies.gradle"
+apply from: "${rootProject.rootDir}/_buildsystem/properties.gradle"
+apply from: "${rootProject.rootDir}/_buildsystem/optimizations.gradle"
+
+apply plugin: "com.android.library"
+
+android {
+  buildToolsVersion project.ext.buildToolsVersion
+  compileSdkVersion project.ext.androidCompileSdkVersion
+  defaultConfig {
+    versionCode project.ext.androidVersionCode
+    versionName project.ext.androidVersionName
+    minSdkVersion project.ext.androidMinSdkVersion
+    targetSdkVersion project.ext.androidTargetSdkVersion
+  }
+  dexOptions {
+    preDexLibraries false
+    javaMaxHeapSize "8g"
+  }
+}
+dependencies {
+  // Adapted from https://repo1.maven.org/maven2/com/facebook/android/account-kit-sdk/5.4.0/account-kit-sdk-5.4.0.pom
+  // Watch out for breaking changes!
+  compileOnly project.ext.providedDependencies
+  implementation "androidx.appcompat:appcompat:1.1.0"
+  implementation "androidx.localbroadcastmanager:localbroadcastmanager:1.0.0"
+  implementation "androidx.core:core:1.2.0"
+  implementation "com.google.android.material:material:1.1.0"
+  implementation "com.google.android.gms:play-services-auth-api-phone:17.4.0"
+  implementation "com.google.android.gms:play-services-auth:18.0.0"
+  implementation "com.googlecode.libphonenumber:libphonenumber:8.12.1"
+}
+
+tasks.lint.enabled = false

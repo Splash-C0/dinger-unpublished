@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  package="org.stoyicker.dinger">
+
+  <application
+    android:name="app.ReleaseApplication"
+    tools:ignore="AllowBackup">
+    <!-- The main manifest takes care of AllowBackup -->
+    <meta-data
+      android:name="com.bugsnag.android.API_KEY"
+      android:value="60f9e29b9f631f4d9c20be26923857ac" />
+  </application>
+</manifest>

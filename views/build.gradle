@@ -1,0 +1,37 @@
+buildscript {
+  apply from: "${rootProject.rootDir}/_buildsystem/buildscript.gradle"
+  repositories project.ext.classpathRepositories
+  dependencies project.ext.classpathDependencies
+}
+
+apply from: "${rootProject.rootDir}/_buildsystem/configurations.gradle"
+apply from: "${rootProject.rootDir}/_buildsystem/dependencies.gradle"
+apply from: "${rootProject.rootDir}/_buildsystem/properties.gradle"
+apply from: "${rootProject.rootDir}/_buildsystem/optimizations.gradle"
+
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+apply plugin: "org.jmailen.kotlinter"
+
+android {
+  buildToolsVersion project.ext.buildToolsVersion
+  compileSdkVersion project.ext.androidCompileSdkVersion
+  defaultConfig {
+    versionCode project.ext.androidVersionCode
+    versionName project.ext.androidVersionName
+    minSdkVersion project.ext.androidMinSdkVersion
+    targetSdkVersion project.ext.androidTargetSdkVersion
+  }
+  dexOptions {
+    preDexLibraries false
+    javaMaxHeapSize "8g"
+  }
+  sourceSets.forEach {
+    it.java.srcDirs = ["src/$it.name/kotlin"]
+  }
+}
+dependencies {
+  implementation project.ext.implementationDependencies
+  // Needs to be api or else Gradle will complain because app can"t resolve Picasso deps
+  api project.ext.implementationViewsDependencies
+}

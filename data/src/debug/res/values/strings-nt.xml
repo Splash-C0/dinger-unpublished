@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="provider_authority_data" translatable="false">data.InitializationContentProvider.debug</string>
+  <string name="account_type" translatable="false">org.stoyicker.dinger.debug</string>
+</resources>

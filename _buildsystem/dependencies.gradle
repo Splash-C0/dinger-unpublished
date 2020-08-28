@@ -1,0 +1,98 @@
+final def constraintLayoutVersion = "1.1.3"
+final def daggerVersion = "2.27"
+final def jsr250Version = "1.0"
+final def lottieVersion = "3.4.0"
+final def moshiVersion = "1.8.0" // Frozen to avoid kotlin-reflect
+final def multidexVersion = "2.0.1"
+final def retrofitVersion = "2.8.1"
+final def rxAndroid2Version = "2.1.1"
+final def storeVersion = "3.1.1"
+final def lifecycleVersion = "2.2.0"
+final def picassoVersion = "2.71828"
+final def facebookLoginSdkVersion = "6.2.0"
+final def playCoreVersion = "1.7.0"
+final def billingVersion = "3.0.0"
+final def shimmerVersion = "0.5.0"
+final def inkPageIndicatorVersion = "1.3.0"
+final def okHttpLoggingInterceptorVersion = "3.14.7" // Frozen, OkHttp 4 has breaking changes
+final def roundedImageViewVersion = "2.3.0"
+final def roomVersion = "2.2.5"
+final def pagingVersion = "2.1.2"
+final def materialVersion = "1.1.0"
+final def emojiVersion = "1.0.0"
+ext {
+  implementationDependencies = [
+      "org.jetbrains.kotlin:kotlin-stdlib:$project.ext.kotlinVersion",
+  ]
+  providedDependencies = [
+      "androidx.annotation:annotation:$project.ext.androidAnnotationsVersion"
+  ]
+  annotationProcessorDependencies = [
+      "com.google.dagger:dagger-compiler:$daggerVersion",
+      "androidx.room:room-compiler:$roomVersion",
+      "javax.annotation:jsr250-api:$jsr250Version"
+  ]
+  implementationAppDependencies = [
+      "com.facebook.android:facebook-login:$facebookLoginSdkVersion",
+      "io.reactivex.rxjava2:rxandroid:$rxAndroid2Version",
+      "com.google.dagger:dagger:$daggerVersion",
+      "com.airbnb.android:lottie:$lottieVersion",
+      "com.google.android.material:material:$materialVersion",
+      "androidx.preference:preference:1.1.0",
+      "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion",
+      "androidx.multidex:multidex:$multidexVersion",
+      "androidx.lifecycle:lifecycle-runtime:$lifecycleVersion",
+      "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion",
+      "androidx.emoji:emoji:$emojiVersion",
+      "com.makeramen:roundedimageview:$roundedImageViewVersion",
+      "com.google.android.play:core:$playCoreVersion",
+      "com.android.billingclient:billing:$billingVersion",
+      "com.facebook.shimmer:shimmer:$shimmerVersion",
+      "com.pacioianu.david:ink-page-indicator:$inkPageIndicatorVersion",
+      "androidx.paging:paging-runtime:$pagingVersion",
+      "com.github.stoyicker.otpview:library:1.0.4"
+  ]
+  implementationDomainDependencies = [
+      "io.reactivex.rxjava2:rxjava:$project.ext.rxjava2Version",
+      "com.facebook.android:facebook-login:$facebookLoginSdkVersion",
+      "androidx.paging:paging-runtime:$pagingVersion",
+      "androidx.lifecycle:lifecycle-viewmodel:$lifecycleVersion"
+  ]
+  implementationDataDependencies = [
+      "com.squareup.retrofit2:retrofit:$retrofitVersion",
+      "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
+      "com.squareup.retrofit2:converter-moshi:$retrofitVersion",
+      "com.nytimes.android:store-kotlin3:$storeVersion",
+      "com.nytimes.android:store3:$storeVersion",
+      "com.nytimes.android:middleware-moshi3:$storeVersion",
+      "com.nytimes.android:filesystem3:$storeVersion",
+      "com.google.dagger:dagger:$daggerVersion",
+      "com.squareup.moshi:moshi-adapters:$moshiVersion",
+      "androidx.room:room-runtime:$roomVersion",
+      "androidx.lifecycle:lifecycle-runtime:$lifecycleVersion",
+      "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion",
+      "com.facebook.android:facebook-login:$facebookLoginSdkVersion",
+      "androidx.paging:paging-runtime:$pagingVersion",
+      "com.google.android.play:core:$playCoreVersion"
+  ]
+  implementationEventTrackerDependencies = [
+      "com.google.android.play:core:$playCoreVersion"
+  ]
+  implementationViewsDependencies = [
+      "com.squareup.picasso:picasso:$picassoVersion",
+      "com.google.android.material:material:$materialVersion"
+  ]
+  debugImplementationDataDependencies = [
+      "com.squareup.okhttp3:logging-interceptor:$okHttpLoggingInterceptorVersion"
+  ]
+  implementationIapsDependencies = [
+      "com.android.billingclient:billing:$billingVersion",
+      "io.reactivex.rxjava2:rxjava:$project.ext.rxjava2Version",
+      "com.google.android.play:core:$playCoreVersion"
+  ]
+}
+repositories {
+  google()
+  jcenter()
+  maven { url "https://jitpack.io" }
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lint>
+  <!-- Debug mode is implicit -->
+  <issue id="LogConditional">
+    <ignore path="*/debug/*" />
+  </issue>
+</lint>

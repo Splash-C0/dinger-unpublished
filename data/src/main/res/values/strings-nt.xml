@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="preferences_file_notifications" translatable="false">notifications</string>
+  <string name="autoswipe_receiver_label" translatable="false">dinger</string>
+  <string name="account_label" translatable="false">dinger</string>
+</resources>

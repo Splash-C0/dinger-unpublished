@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <integer name="sweep_from_error_delay_ms">7200000</integer> <!-- 1000 * 60 * 60 * 2 = 2h -->
+</resources>

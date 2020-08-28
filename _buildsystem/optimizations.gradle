@@ -1,0 +1,14 @@
+tasks.withType(Test) {
+  maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
+}
+tasks.withType(Test) {
+  forkEvery = 100
+}
+tasks.withType(Test) {
+  reports.html.enabled = false
+  reports.junitXml.enabled = false
+}
+tasks.withType(JavaCompile) {
+  options.fork = true
+  options.incremental = true
+}

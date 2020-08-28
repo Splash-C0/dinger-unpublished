@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lint>
+  <issue id="GoogleAppIndexingWarning" severity="ignore" />
+  <issue id="IconExpectedSize">
+    <!-- Not a launcher icon -->
+    <ignore regexp="ic_launcher_big" />
+  </issue>
+  <issue id="IconExpectedSize,IconDuplicates">
+    <!-- Lint does not seem to work too well with adaptive icons just yet -->
+    <ignore regexp="ic_launcher_adaptive" />
+  </issue>
+  <issue id="UnusedIds" severity="ignore" />
+  <issue id="MissingRegistered" severity="ignore" />
+  <!-- Synthetic accessors could only ever have a real impact on lists -->
+  <issue id="SyntheticAccessor" severity="ignore" />
+  <issue id="VectorPath" severity="ignore" />
+</lint>

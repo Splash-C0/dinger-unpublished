@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <integer name="age_filter_max">54</integer>
+  <integer name="age_filter_min">18</integer>
+  <integer name="distance_filter_max">161</integer>
+  <integer name="distance_filter_min">2</integer>
+  <integer name="grid_span">2</integer>
+  <integer name="rate_home_count_required">4</integer>
+</resources>

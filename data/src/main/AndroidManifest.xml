@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  package="org.stoyicker.dinger.data">
+
+  <application>
+    <provider
+      android:name="data.InitializationContentProvider"
+      android:authorities="@string/provider_authority_data"
+      android:exported="false"
+      android:syncable="false" />
+
+    <receiver
+      android:name="data.autoswipe.AutoSwipeLauncherBroadcastReceiver"
+      android:description="@string/autoswipe_receiver_description"
+      android:icon="@drawable/ic_launcher_adaptive"
+      android:label="@string/autoswipe_receiver_label">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+        <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+        <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+      </intent-filter>
+    </receiver>
+
+    <service
+      android:name="data.autoswipe.AutoSwipeIntentService"
+      android:description="@string/autoswipe_receiver_description"
+      android:icon="@drawable/ic_launcher_adaptive"
+      android:label="@string/autoswipe_receiver_label"
+      android:permission="android.permission.BIND_JOB_SERVICE" />
+
+    <service
+      android:name="data.account.DingerAccountManagerService"
+      android:exported="false">
+      <intent-filter>
+        <action android:name="android.accounts.AccountAuthenticator" />
+      </intent-filter>
+      <meta-data
+        android:name="android.accounts.AccountAuthenticator"
+        android:resource="@xml/authenticator_dinger" />
+    </service>
+
+    <activity
+      android:name="data.autoswipe.AutoSwipeLauncherFromShortcutActivity"
+      android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+  </application>
+
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+  <uses-permission android:name="android.permission.INTERNET" />
+</manifest>

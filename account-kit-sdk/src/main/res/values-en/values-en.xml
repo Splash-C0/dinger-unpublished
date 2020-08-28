@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="com_accountkit_button_resend_code_countdown" gender="unknown">Send code again via SMS in %1$d</string>
+  <string name="com_accountkit_button_resend_code_in" gender="unknown">Send SMS again in %1$d</string>
+  <string name="com_accountkit_button_resend_sms_code" gender="unknown">Send SMS Code Again</string>
+  <string name="com_accountkit_button_resend_whatsapp" gender="unknown">Send code again in WhatsApp</string>
+  <string name="com_accountkit_button_send_code_in_fb_details" gender="unknown">The code will arrive as a Facebook notification</string>
+  <string name="com_accountkit_button_send_code_in_whatsapp_details" gender="unknown">Get a message sent in WhatsApp with your code.</string>
+  <string name="com_accountkit_check_email" gender="unknown">Open your email</string>
+  <string name="com_accountkit_code_change_number" gender="unknown">Change number</string>
+  <string name="com_accountkit_code_phonenumber_and_change" gender="unknown">%1$s. Change number</string>
+  <string name="com_accountkit_confirmation_code_agreement" gender="unknown">Tap %1$s to accept Facebook\'s &lt;a href=%2$s>Terms&lt;/a>, &lt;a href=%3$s>Data Policy&lt;/a> and &lt;a href=%4$s>Cookie Use Policy&lt;/a>.</string>
+  <string name="com_accountkit_confirmation_code_agreement_app_privacy_policy" gender="unknown">Tap %1$s to accept Facebook\'s &lt;a href=%2$s>Terms&lt;/a>, &lt;a href=%3$s>Data Policy&lt;/a> and &lt;a href=%4$s>Cookie Use Policy&lt;/a>, and the &lt;a href=%5$s>Privacy Policy&lt;/a> of %6$s.</string>
+  <string name="com_accountkit_confirmation_code_agreement_app_privacy_policy_and_terms" gender="unknown">Tap %1$s to accept Facebook\'s &lt;a href=%2$s>Terms&lt;/a>, &lt;a href=%3$s>Data Policy&lt;/a> and &lt;a href=%4$s>Cookie Use Policy&lt;/a>, and the &lt;a href=%5$s>Privacy Policy&lt;/a> and &lt;a href=%6$s>Terms of Service&lt;/a> of %7$s.</string>
+  <string name="com_accountkit_confirmation_code_agreement_app_privacy_policy_and_terms_instant_verification" gender="unknown">Tap %1$s to accept Facebook\'s &lt;a href=%2$s>Terms&lt;/a>, &lt;a href=%3$s>Data Policy&lt;/a> and &lt;a href=%4$s>Cookie Use Policy&lt;/a>, and the &lt;a href=%5$s>Privacy Policy&lt;/a> and &lt;a href=%6$s>Terms of Service&lt;/a> of %7$s. &lt;a href=%8$s>Learn more&lt;/a> about how your account was verified.</string>
+  <string name="com_accountkit_confirmation_code_agreement_app_privacy_policy_instant_verification" gender="unknown">Tap %1$s to accept Facebook\'s &lt;a href=%2$s>Terms&lt;/a>, &lt;a href=%3$s>Data Policy&lt;/a> and &lt;a href=%4$s>Cookie Use Policy&lt;/a>, and the &lt;a href=%5$s>Privacy Policy&lt;/a> of %6$s. &lt;a href=%7$s>Learn more&lt;/a> about how your account was verified.</string>
+  <string name="com_accountkit_confirmation_code_agreement_instant_verification" gender="unknown">Tap %1$s to accept Facebook\'s &lt;a href=%2$s>Terms&lt;/a>, &lt;a href=%3$s>Data Policy&lt;/a> and &lt;a href=%4$s>Cookie Use Policy&lt;/a>. &lt;a href=%5$s>Learn more&lt;/a> about how your account was verified.</string>
+  <string name="com_accountkit_confirmation_code_text" gender="unknown">I didn\'t receive a code</string>
+  <string name="com_accountkit_email_invalid" gender="unknown">This email address is incorrect. Please try again.</string>
+  <string name="com_accountkit_email_loading_title" gender="unknown">Verifying your email address…</string>
+  <string name="com_accountkit_email_login_retry_title" gender="unknown">Confirm your email address</string>
+  <string name="com_accountkit_email_login_text" gender="unknown">Tap %1$s to receive an email confirmation from Account Kit by Facebook to help you use %2$s. You don\'t need a Facebook account to use it. &lt;a href=%3$s>Learn how Facebook uses your info&lt;/a>.</string>
+  <string name="com_accountkit_other_ways_to_get_code" gender="unknown">Other ways to get a code:</string>
+  <string name="com_accountkit_phone_login_text" gender="unknown">Tap %1$s to verify your account with Account Kit powered by Facebook. You don\'t need a Facebook account to use Account Kit. An SMS may be sent to verify your number. Message and data rates may apply. &lt;a href=%2$s>Learn how Facebook uses your info&lt;/a>.</string>
+  <string name="com_accountkit_phone_whatsapp_login_text" gender="unknown">Standard SMS rates may apply.</string>
+  <string name="com_accountkit_resend_email_text" gender="unknown">Send new email</string>
+  <string name="com_accountkit_resend_switch_whatsapp_detail" gender="unknown">Get a message sent in WhatsApp with your code.</string>
+  <string name="com_accountkit_resend_title" gender="unknown">If you haven\'t received a code:</string>
+  <string name="com_accountkit_toolbar_title" gender="unknown">Log in to %1$s</string>
+</resources>

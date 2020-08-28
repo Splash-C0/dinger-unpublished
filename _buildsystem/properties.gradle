@@ -1,0 +1,12 @@
+final def runningOnCi = System.getenv("CI") != null
+ext {
+  androidCompileSdkVersion = 30
+  androidMinSdkVersion = 23
+  androidTargetSdkVersion = 30
+  androidVersionCode = runningOnCi ? "git rev-list --count HEAD".execute().text.toInteger() : Integer.MAX_VALUE
+  // Depending on the git method locally causes IDE issues
+  androidVersionName = String.valueOf(androidVersionCode)
+  androidApplicationIdBase = "org.stoyicker.dinger"
+  staticAnalysisReportTarget = project.buildDir.absolutePath + "/staticAnalysisReport"
+  javaVersion = JavaVersion.VERSION_1_8
+}

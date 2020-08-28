@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:layout_marginTop="@dimen/layout_spacing_large">
+
+  <com.pixelcan.inkpageindicator.InkPageIndicator
+    android:id="@+id/indicator"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:ipi_currentPageIndicatorColor="@color/text_primary"
+    app:ipi_pageIndicatorColor="@color/text_secondary" />
+
+  <androidx.viewpager.widget.ViewPager
+    android:id="@+id/pager_tutorial"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+</LinearLayout>

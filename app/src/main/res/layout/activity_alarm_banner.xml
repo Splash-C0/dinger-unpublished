@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:gravity="center"
+  android:orientation="vertical"
+  android:padding="@dimen/layout_spacing_large"
+  tools:context="app.entryscreen.alarmbanner.AlarmBannerActivity">
+
+  <Space
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_weight="1" />
+
+  <Space
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_weight="1" />
+
+  <Space
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_weight="1" />
+
+  <Space
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_weight="1" />
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/continue_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/alarm_do_it"
+    android:textAllCaps="true"
+    android:textColor="@android:color/black"
+    app:backgroundTint="@color/accent"
+    android:textStyle="bold" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    style="@style/TextAppearance.AppCompat.Subhead"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:text="@string/alarm_set_announcement" />
+
+  <com.airbnb.lottie.LottieAnimationView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:scaleType="centerCrop"
+    app:lottie_autoPlay="true"
+    app:lottie_enableMergePathsForKitKatAndAbove="true"
+    app:lottie_fileName="lottie_emoji_wink.json"
+    app:lottie_loop="true" />
+</LinearLayout>

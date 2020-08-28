@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lint>
+  <issue id="UnusedResources">
+    <!-- False positive -->
+    <ignore regexp="ic_notification" />
+  </issue>
+  <!-- Synthetic accessors could only ever have a real impact on lists -->
+  <issue id="SyntheticAccessor" severity="ignore" />
+  <issue id="SwitchIntDef">
+    <ignore regexp="AutoSwipeReportHandler" /> <!-- False positive -->
+  </issue>
+  <!-- Not a real problem -->
+  <issue id="DuplicateStrings" severity="ignore" />
+</lint>

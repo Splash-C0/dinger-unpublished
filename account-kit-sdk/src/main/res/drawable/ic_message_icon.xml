@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
+
+    You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
+    copy, modify, and distribute this software in source code or binary form for use
+    in connection with the web services and APIs provided by Facebook.
+
+    As with any software that integrates with the Facebook platform, your use of
+    this software is subject to the Facebook Developer Principles and Policies
+    [http://developers.facebook.com/policy/]. This copyright notice shall be
+    included in all copies or substantial portions of the software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+    FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+    COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+    IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+    CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+
+<vector
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:width="20dp"
+  android:height="20dp"
+  android:viewportWidth="50.0"
+  android:viewportHeight="50.0">
+  <path
+    android:fillColor="#FF000000"
+    android:pathData="M41.9908378,30.008 C41.992778,31.4454074 41.995, 33.2686891 41.995,34.08 C41.995,36.565 41.041,36.509 38.799, 34.665 C37.0135253,33.1963361 34.4975292,31.1551896 33.0809577, 30.008 L15,30.008 C13.344,30.008 12,28.665 12,27.008 L12, 9.001 C12,7.344 13.344,6.001 15,6.001 L43,6.001 C44.657, 6.001 46,7.344 46,9.001 L46,27.008 C46,28.665 44.657,30.008 43, 30.008 L41.9908378,30.008 Z M6.00790387,39.969 L5,39.969 C3.343, 39.969 2,38.625 2,36.969 L2,22 C2,20.343 3.343,19 5,19 L10,19 L10, 28.509 C10,30.442 11.567,32.009 13.5,32.009 L31,32.009 L31, 36.969 C31,38.625 29.657,39.969 28,39.969 L13.7330565, 39.969 C12.335514,41.1026623 10.5571149,42.5490845 9.201, 43.665 C6.959,45.509 6.005,45.565 6.005,43.08 C6.005, 42.4421108 6.00637361,41.1786402 6.00790387,39.9689996 Z"
+    android:strokeWidth="0.5">
+
+  </path>
+</vector>

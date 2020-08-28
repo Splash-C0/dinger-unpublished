@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="@string/preference_category_autoswipe">
+    <androidx.preference.SwitchPreferenceCompat
+      android:key="@string/preference_key_autoswipe_enabled"
+      android:title="@string/preference_title_autoswipe_enabled" />
+    <Preference
+      android:key="@string/preference_key_run_now"
+      android:title="@string/preference_title_run_now" />
+    <androidx.preference.SwitchPreferenceCompat
+      android:defaultValue="true"
+      android:dependency="@string/preference_key_autoswipe_enabled"
+      android:key="@string/preference_key_force_top_pick"
+      android:title="@string/preference_title_force_top_pick" />
+    <androidx.preference.SwitchPreferenceCompat
+      android:defaultValue="false"
+      android:dependency="@string/preference_key_autoswipe_enabled"
+      android:key="@string/preference_key_wifi_only"
+      android:title="@string/preference_title_wifi_only" />
+    <androidx.preference.SwitchPreferenceCompat
+      android:defaultValue="false"
+      android:dependency="@string/preference_key_autoswipe_enabled"
+      android:key="@string/preference_key_dislike_empty_profiles"
+      android:title="@string/preference_title_dislike_empty_profiles" />
+    <androidx.preference.SwitchPreferenceCompat
+      android:defaultValue="false"
+      android:dependency="@string/preference_key_autoswipe_enabled"
+      android:key="@string/preference_key_dislike_if_friends_in_common"
+      android:title="@string/preference_title_dislike_if_friends_in_common" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/preference_category_notifications">
+    <Preference
+      android:key="@string/preference_key_manage_notifications"
+      android:title="@string/preference_title_manage_notifications" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/preference_category_account">
+    <Preference
+      android:key="@string/preference_key_logout"
+      android:title="@string/preference_title_logout" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/preference_category_about">
+    <Preference
+      android:key="@string/preference_key_share"
+      android:title="@string/preference_title_share" />
+    <Preference
+      android:key="@string/preference_key_about_the_app"
+      android:title="@string/preference_title_about_the_app" />
+    <Preference
+      android:key="@string/preference_key_privacy_policy"
+      android:title="@string/preference_title_privacy_policy" />
+  </PreferenceCategory>
+</PreferenceScreen>

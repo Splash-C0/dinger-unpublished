@@ -1,0 +1,74 @@
+version: 2.1
+jobs:
+  build_app:
+    docker:
+      - image: circleci/android:api-29
+    environment:
+      GRADLE_OPTS: -Xms256M -Xmx768M -Xss2M -XX:ReservedCodeCacheSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dorg.gradle.configureondemand=true -Dkotlin.compiler.execution.strategy=in-process -Dkotlin.incremental=false
+    steps:
+      - checkout
+      - run: ./gradlew :app:assemble --no-daemon --no-build-cache --refresh-dependencies --stacktrace
+      - store_artifacts:
+          path: app/build/outputs/
+          destination: outputs/
+  release_on_google_play:
+    docker:
+      - image: circleci/android:api-29
+    environment:
+      GRADLE_OPTS: -Xms256M -Xmx768M -Xss2M -XX:ReservedCodeCacheSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dorg.gradle.configureondemand=true -Dkotlin.compiler.execution.strategy=in-process -Dkotlin.incremental=false
+    steps:
+      - checkout
+      - run: echo $(git rev-list --count HEAD) > app/src/main/play/release-names/alpha.txt
+      - run: ./gradlew :app:publishReleaseBundle --no-daemon --no-build-cache --refresh-dependencies --stacktrace
+      - store_artifacts:
+          path: app/build/outputs/
+          destination: outputs/
+  ensure_tag_allowed:
+    docker:
+      - image: circleci/node:4.8.2
+    steps:
+      - checkout
+      - run: ./.circleci/ensure_tag_allowed.sh
+  tag:
+    docker:
+      - image: circleci/node:4.8.2
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "8b:dc:59:db:af:91:22:0f:e1:2f:25:65:df:83:6b:e6"
+      - checkout
+      - run: ./.circleci/tag.sh
+workflows:
+  version: 2.1
+  test:
+    jobs:
+      - build_app:
+          filters:
+            tags:
+              ignore: /.*/
+            branches:
+              ignore: master
+  release:
+    jobs:
+      - release_on_google_play:
+          filters:
+            tags:
+              ignore: /.*/
+            branches:
+              only: master
+          requires:
+            - tag
+      - ensure_tag_allowed:
+          filters:
+            tags:
+              ignore: /.*/
+            branches:
+              only: master
+      - tag:
+          filters:
+            tags:
+              ignore: /.*/
+            branches:
+              only: master
+          requires:
+            - ensure_tag_allowed

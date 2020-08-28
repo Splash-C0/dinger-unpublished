@@ -1,0 +1,15 @@
+<shortcuts
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <shortcut
+    android:enabled="true"
+    android:shortcutId="autoswipe"
+    android:icon="@drawable/ic_launcher_adaptive"
+    android:shortcutLongLabel="@string/preference_title_run_now"
+    android:shortcutShortLabel="@string/preference_title_run_now">
+    <!-- Because of the package being hardcoded, it'll only work on release builds. Not feasibly fixable -->
+    <intent
+      android:action="ignored_launched_from_shortcut"
+      android:targetClass="data.autoswipe.AutoSwipeLauncherFromShortcutActivity"
+      android:targetPackage="org.stoyicker.dinger" />
+  </shortcut>
+</shortcuts>

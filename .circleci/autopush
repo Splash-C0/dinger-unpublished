@@ -1,0 +1,25 @@
+#!/bin/bash
+set -e
+
+exec >> autorelease.log
+exec 2>&1
+
+DATE=$(date)
+
+echo ---------------
+echo "$DATE"
+echo ---------------
+
+function commit_and_push {
+  echo "Attempting to pull..."
+  git pull
+  echo "Pull done"
+  echo "Attempting to commit..."
+  git commit --allow-empty -m "$DATE"
+  echo "Commit done"
+  echo "Attempting to push..."
+  git push
+  echo "Push done"
+}
+
+commit_and_push

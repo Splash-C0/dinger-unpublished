@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:animateLayoutChanges="true"
+  android:orientation="vertical">
+
+  <androidx.constraintlayout.widget.Group
+    android:id="@android:id/empty"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:constraint_referenced_ids="empty_icon,empty_text" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/empty_text"
+    android:layout_width="256dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/layout_spacing_large"
+    android:gravity="center"
+    android:text="@string/empty_seen"
+    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+    android:textColor="@color/text_primary"
+    app:layout_constraintEnd_toEndOf="@id/empty_icon"
+    app:layout_constraintStart_toStartOf="@id/empty_icon"
+    app:layout_constraintTop_toBottomOf="@id/empty_icon" />
+
+  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipe_to_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/promo_banner_autoswipe_wrapper">
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recycler_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:overScrollMode="never" />
+  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+  <com.airbnb.lottie.LottieAnimationView
+    android:id="@+id/empty_icon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:adjustViewBounds="true"
+    android:scaleType="fitCenter"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/promo_banner_autoswipe_wrapper"
+    app:lottie_autoPlay="true"
+    app:lottie_enableMergePathsForKitKatAndAbove="true"
+    app:lottie_fileName="lottie_emoji_searching.json"
+    app:lottie_loop="true"
+    app:lottie_scale="2" />
+
+  <com.facebook.shimmer.ShimmerFrameLayout
+    android:id="@+id/promo_banner_autoswipe_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:shimmer_auto_start="true"
+    app:shimmer_base_alpha="0.75"
+    app:shimmer_repeat_delay="1500">
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/promo_banner_autoswipe"
+      style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/layout_spacing_medium"
+      android:gravity="center"
+      android:lineSpacingMultiplier="1.2"
+      android:maxLines="2"
+      android:padding="@dimen/layout_spacing_small"
+      android:text="@string/promo_banner_autoswipe"
+      android:textColor="@color/primary_dark"
+      android:textStyle="bold"
+      app:autoSizeMinTextSize="1sp"
+      app:autoSizeStepGranularity="1sp"
+      app:autoSizeTextType="uniform"
+      app:backgroundTint="@color/accent"
+      app:strokeColor="@color/accent"
+      app:strokeWidth="2dp" />
+  </com.facebook.shimmer.ShimmerFrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

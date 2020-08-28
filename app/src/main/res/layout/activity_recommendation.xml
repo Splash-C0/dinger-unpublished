@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:scrollbarAlwaysDrawVerticalTrack="true"
+  android:fadeScrollbars="false">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+      android:id="@+id/toolbar_included"
+      layout="@layout/include_toolbar"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+      style="?android:attr/progressBarStyle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:indeterminate="true"
+      app:layout_constraintBottom_toBottomOf="@id/pager_pics"
+      app:layout_constraintEnd_toEndOf="@id/pager_pics"
+      app:layout_constraintStart_toStartOf="@id/pager_pics"
+      app:layout_constraintTop_toTopOf="@id/pager_pics" />
+
+    <androidx.viewpager.widget.ViewPager
+      android:id="@+id/pager_pics"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/recommendation_image_side"
+      app:layout_constraintTop_toBottomOf="@id/toolbar_included" />
+
+    <com.pixelcan.inkpageindicator.InkPageIndicator
+      android:id="@+id/indicator"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/layout_spacing_small"
+      app:ipi_currentPageIndicatorColor="@color/text_primary"
+      app:ipi_pageIndicatorColor="@color/text_secondary"
+      app:layout_constraintTop_toTopOf="@id/pager_pics" />
+
+    <View
+      android:id="@+id/pager_pics_divider"
+      android:layout_width="match_parent"
+      android:layout_height="2dp"
+      android:background="@color/text_secondary"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/pager_pics" />
+
+    <androidx.emoji.widget.EmojiTextView
+      android:id="@+id/label_teaser"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/layout_spacing_large"
+      android:layout_marginTop="@dimen/layout_spacing_small"
+      android:layout_marginEnd="@dimen/layout_spacing_large"
+      android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/pager_pics_divider" />
+
+    <androidx.emoji.widget.EmojiTextView
+      android:id="@+id/label_distance"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/layout_spacing_large"
+      android:layout_marginTop="@dimen/layout_spacing_small"
+      android:layout_marginEnd="@dimen/layout_spacing_large"
+      android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/label_teaser" />
+
+    <androidx.emoji.widget.EmojiTextView
+      android:id="@+id/label_bio"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/layout_spacing_large"
+      android:layout_marginTop="@dimen/layout_spacing_large"
+      android:layout_marginEnd="@dimen/layout_spacing_large"
+      android:scrollbars="vertical"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+      android:textIsSelectable="true"
+      app:autoSizeTextType="uniform"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/label_distance" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

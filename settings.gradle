@@ -1,0 +1,11 @@
+include ":app",
+    ":data",
+    ":domain",
+    ":crash-reporter",
+    ":event-tracker",
+    ":proxy-data",
+    ":extensions",
+    ":views",
+    ":iaps",
+    ":translations",
+    ":account-kit-sdk"

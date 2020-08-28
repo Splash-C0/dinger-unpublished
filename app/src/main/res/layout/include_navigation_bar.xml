@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.bottomnavigation.BottomNavigationView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/navigation_bar"
+  android:layout_width="match_parent"
+  android:layout_height="@dimen/navigation_bottom_bar_height"
+  android:background="@android:color/black"
+  app:itemIconTint="@color/navigation_bar_item_foreground"
+  app:itemTextColor="@color/navigation_bar_item_foreground"
+  app:menu="@menu/view_navigation_bar" />

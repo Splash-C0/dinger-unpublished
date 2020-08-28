@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 1 by 1 tiles -->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+  android:minWidth="40dp"
+  android:minHeight="40dp"
+  android:updatePeriodMillis="0"
+  android:initialLayout="@layout/appwidget_run_now"
+  android:resizeMode="horizontal|vertical"
+  android:widgetCategory="home_screen|keyguard|searchbox">
+</appwidget-provider>

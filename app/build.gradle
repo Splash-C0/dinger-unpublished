@@ -1,0 +1,102 @@
+buildscript {
+  apply from: "${rootProject.rootDir}/_buildsystem/buildscript.gradle"
+  repositories project.ext.classpathRepositories
+  dependencies project.ext.classpathDependencies
+}
+
+apply from: "${rootProject.rootDir}/_buildsystem/buildscript.gradle"
+apply from: "${rootProject.rootDir}/_buildsystem/configurations.gradle"
+apply from: "${rootProject.rootDir}/_buildsystem/dependencies.gradle"
+apply from: "${rootProject.rootDir}/_buildsystem/properties.gradle"
+apply from: "${rootProject.rootDir}/_buildsystem/optimizations.gradle"
+apply from: "${rootProject.rootDir}/_buildsystem/test_options.gradle"
+
+apply plugin: "com.android.application"
+apply plugin: "com.bugsnag.android.gradle"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-kapt"
+apply plugin: "org.jmailen.kotlinter"
+apply plugin: "kotlin-android-extensions"
+apply plugin: "com.github.triplet.play"
+
+final def runningOnCi = System.getenv("CI") != null
+android {
+  buildToolsVersion project.ext.buildToolsVersion
+  compileSdkVersion project.ext.androidCompileSdkVersion
+  signingConfigs {
+    release {
+      storeFile new File("${rootProject.rootDir.absolutePath}/dinger.keystore")
+      storePassword "CEE4EF7EEF2961C2636D4BDF67216"
+      keyAlias "E33D4475EB7AF16E36D6ADD4945E7"
+      keyPassword "CEE4EF7EEF2961C2636D4BDF67216"
+    }
+  }
+  buildTypes {
+    debug {
+      applicationIdSuffix ".debug" // Do not change
+    }
+    release {
+      signingConfig signingConfigs.release
+      debuggable !runningOnCi
+      minifyEnabled runningOnCi
+      shrinkResources runningOnCi
+      proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"),
+          "proguard/rules.pro"
+    }
+  }
+  defaultConfig {
+    applicationId project.ext.androidApplicationIdBase
+    versionCode project.ext.androidVersionCode
+    versionName project.ext.androidVersionName
+    minSdkVersion project.ext.androidMinSdkVersion
+    targetSdkVersion project.ext.androidTargetSdkVersion
+    multiDexEnabled true
+    buildConfigField "boolean", "CI", "$runningOnCi"
+    resConfigs "en", "es", "sv"
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  dexOptions {
+    preDexLibraries false
+    javaMaxHeapSize "8g"
+  }
+  lintOptions {
+    checkDependencies true
+    ignoreTestSources true
+    abortOnError true
+    absolutePaths true
+    checkAllWarnings true
+    disable "WrongThreadInterprocedural"
+    checkDependencies true
+    htmlOutput = new File("$project.ext.staticAnalysisReportTarget/$project.name/lint.html")
+    quiet false
+    warningsAsErrors true
+  }
+  sourceSets.forEach {
+    it.java.srcDirs = ["src/$it.name/kotlin"]
+  }
+  testOptions project.ext.testOptions
+}
+dependencies {
+  implementation project(":proxy-data")
+  implementation project(":domain")
+  implementation project(":crash-reporter")
+  implementation project(":extensions")
+  implementation project(":views")
+  implementation project(":iaps")
+  implementation project(":translations")
+  implementation project(":account-kit-sdk")
+  implementation project.ext.implementationDependencies
+  kapt project.ext.annotationProcessorDependencies
+  implementation project.ext.implementationAppDependencies
+}
+play {
+  enabled = false
+  track = "production"
+  releaseStatus = "completed"
+  userFraction = 1
+  serviceAccountCredentials = file(".")
+  defaultToAppBundles = true
+}

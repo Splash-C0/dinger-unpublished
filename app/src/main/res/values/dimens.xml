@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="layout_spacing_xtra_xtra_large">64dp</dimen>
+  <dimen name="layout_spacing_xtra_large">32dp</dimen>
+  <dimen name="layout_spacing_large">16dp</dimen>
+  <dimen name="layout_spacing_medium">8dp</dimen>
+  <dimen name="layout_spacing_small">4dp</dimen>
+  <dimen name="layout_spacing_xtra_small">2dp</dimen>
+  <dimen name="navigation_bottom_bar_height">56dp</dimen>
+  <dimen name="profile_image_side">128dp</dimen>
+  <dimen name="recommendation_image_side">384dp</dimen>
+  <dimen name="text_size_chip">8sp</dimen>
+</resources>

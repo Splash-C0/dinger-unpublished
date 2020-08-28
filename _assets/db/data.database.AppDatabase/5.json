@@ -1,0 +1,1145 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 5,
+    "identityHash": "b4927ef260e74c561b1ebb2ac5eda424",
+    "entities": [
+      {
+        "tableName": "RecommendationUserEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`bio` TEXT COLLATE NOCASE, `distanceMiles` INTEGER NOT NULL, `commonFriendCount` INTEGER NOT NULL, `commonLikeCount` INTEGER NOT NULL, `contentHash` TEXT, `id` TEXT NOT NULL, `name` TEXT NOT NULL COLLATE NOCASE, `instagram` TEXT COLLATE NOCASE, `teaser` TEXT COLLATE NOCASE, `sNumber` INTEGER NOT NULL, `spotifyThemeTrack` TEXT, `gender` INTEGER NOT NULL, `birthDateInfo` TEXT NOT NULL COLLATE NOCASE, `groupMatched` INTEGER NOT NULL, `liked` INTEGER NOT NULL, `matched` INTEGER NOT NULL, `insertionEpoch` INTEGER NOT NULL, `filterableContent` TEXT, PRIMARY KEY(`id`), FOREIGN KEY(`instagram`) REFERENCES `RecommendationUserInstagramEntity`(`username`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`teaser`) REFERENCES `RecommendationUserTeaserEntity`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`spotifyThemeTrack`) REFERENCES `RecommendationUserSpotifyThemeTrackEntity`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "bio",
+            "columnName": "bio",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "distanceMiles",
+            "columnName": "distanceMiles",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "commonFriendCount",
+            "columnName": "commonFriendCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "commonLikeCount",
+            "columnName": "commonLikeCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contentHash",
+            "columnName": "contentHash",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "instagram",
+            "columnName": "instagram",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "teaser",
+            "columnName": "teaser",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sNumber",
+            "columnName": "sNumber",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "spotifyThemeTrack",
+            "columnName": "spotifyThemeTrack",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "gender",
+            "columnName": "gender",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "birthDateInfo",
+            "columnName": "birthDateInfo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "groupMatched",
+            "columnName": "groupMatched",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "liked",
+            "columnName": "liked",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "matched",
+            "columnName": "matched",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "insertionEpoch",
+            "columnName": "insertionEpoch",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "filterableContent",
+            "columnName": "filterableContent",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserEntity_id",
+            "unique": false,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserEntity_id` ON `${TABLE_NAME}` (`id`)"
+          },
+          {
+            "name": "index_RecommendationUserEntity_name",
+            "unique": false,
+            "columnNames": [
+              "name"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserEntity_name` ON `${TABLE_NAME}` (`name`)"
+          },
+          {
+            "name": "index_RecommendationUserEntity_instagram",
+            "unique": false,
+            "columnNames": [
+              "instagram"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserEntity_instagram` ON `${TABLE_NAME}` (`instagram`)"
+          },
+          {
+            "name": "index_RecommendationUserEntity_teaser",
+            "unique": false,
+            "columnNames": [
+              "teaser"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserEntity_teaser` ON `${TABLE_NAME}` (`teaser`)"
+          },
+          {
+            "name": "index_RecommendationUserEntity_spotifyThemeTrack",
+            "unique": false,
+            "columnNames": [
+              "spotifyThemeTrack"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserEntity_spotifyThemeTrack` ON `${TABLE_NAME}` (`spotifyThemeTrack`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "RecommendationUserInstagramEntity",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "instagram"
+            ],
+            "referencedColumns": [
+              "username"
+            ]
+          },
+          {
+            "table": "RecommendationUserTeaserEntity",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "teaser"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "RecommendationUserSpotifyThemeTrackEntity",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "spotifyThemeTrack"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "RecommendationUserInstagramEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`profilePictureUrl` TEXT, `mediaCount` INTEGER NOT NULL, `completedInitialFetch` INTEGER NOT NULL, `username` TEXT NOT NULL, PRIMARY KEY(`username`))",
+        "fields": [
+          {
+            "fieldPath": "profilePictureUrl",
+            "columnName": "profilePictureUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mediaCount",
+            "columnName": "mediaCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "completedInitialFetch",
+            "columnName": "completedInitialFetch",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "username",
+            "columnName": "username",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "username"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserInstagramEntity_username",
+            "unique": false,
+            "columnNames": [
+              "username"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserInstagramEntity_username` ON `${TABLE_NAME}` (`username`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserInstagramPhotoEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`link` TEXT NOT NULL, `imageUrl` TEXT NOT NULL, `thumbnailUrl` TEXT NOT NULL, `ts` TEXT NOT NULL, PRIMARY KEY(`link`))",
+        "fields": [
+          {
+            "fieldPath": "link",
+            "columnName": "link",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imageUrl",
+            "columnName": "imageUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "thumbnailUrl",
+            "columnName": "thumbnailUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ts",
+            "columnName": "ts",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "link"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserInstagramPhotoEntity_link",
+            "unique": false,
+            "columnNames": [
+              "link"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserInstagramPhotoEntity_link` ON `${TABLE_NAME}` (`link`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserTeaserEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `description` TEXT NOT NULL, `type` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserTeaserEntity_id",
+            "unique": false,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserTeaserEntity_id` ON `${TABLE_NAME}` (`id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserSpotifyThemeTrackEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`album` TEXT, `previewUrl` TEXT, `name` TEXT NOT NULL, `id` TEXT NOT NULL, `uri` TEXT NOT NULL, PRIMARY KEY(`id`), FOREIGN KEY(`album`) REFERENCES `RecommendationUserSpotifyThemeTrackAlbumEntity`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "album",
+            "columnName": "album",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "previewUrl",
+            "columnName": "previewUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "uri",
+            "columnName": "uri",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserSpotifyThemeTrackEntity_id",
+            "unique": false,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserSpotifyThemeTrackEntity_id` ON `${TABLE_NAME}` (`id`)"
+          },
+          {
+            "name": "index_RecommendationUserSpotifyThemeTrackEntity_album",
+            "unique": false,
+            "columnNames": [
+              "album"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserSpotifyThemeTrackEntity_album` ON `${TABLE_NAME}` (`album`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "RecommendationUserSpotifyThemeTrackAlbumEntity",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "album"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "RecommendationUserSpotifyThemeTrackAlbumEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name` TEXT NOT NULL, `id` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserSpotifyThemeTrackAlbumEntity_id",
+            "unique": false,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserSpotifyThemeTrackAlbumEntity_id` ON `${TABLE_NAME}` (`id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserEntity_RecommendationUserCommonFriendEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recommendationUserEntityId` TEXT NOT NULL, `recommendationUserCommonFriendEntityId` TEXT NOT NULL, PRIMARY KEY(`recommendationUserEntityId`, `recommendationUserCommonFriendEntityId`))",
+        "fields": [
+          {
+            "fieldPath": "recommendationUserEntityId",
+            "columnName": "recommendationUserEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recommendationUserCommonFriendEntityId",
+            "columnName": "recommendationUserCommonFriendEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "recommendationUserEntityId",
+            "recommendationUserCommonFriendEntityId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserEntity_RecommendationUserCommonFriendEntity_recommendationUserEntityId",
+            "unique": false,
+            "columnNames": [
+              "recommendationUserEntityId"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserEntity_RecommendationUserCommonFriendEntity_recommendationUserEntityId` ON `${TABLE_NAME}` (`recommendationUserEntityId`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserEntity_RecommendationLikeEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recommendationUserEntityId` TEXT NOT NULL, `recommendationLikeEntityId` TEXT NOT NULL, PRIMARY KEY(`recommendationUserEntityId`, `recommendationLikeEntityId`))",
+        "fields": [
+          {
+            "fieldPath": "recommendationUserEntityId",
+            "columnName": "recommendationUserEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recommendationLikeEntityId",
+            "columnName": "recommendationLikeEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "recommendationUserEntityId",
+            "recommendationLikeEntityId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserEntity_RecommendationLikeEntity_recommendationUserEntityId",
+            "unique": false,
+            "columnNames": [
+              "recommendationUserEntityId"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserEntity_RecommendationLikeEntity_recommendationUserEntityId` ON `${TABLE_NAME}` (`recommendationUserEntityId`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserEntity_RecommendationUserPhotoEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recommendationUserEntityId` TEXT NOT NULL, `recommendationUserPhotoEntityId` TEXT NOT NULL, PRIMARY KEY(`recommendationUserEntityId`, `recommendationUserPhotoEntityId`))",
+        "fields": [
+          {
+            "fieldPath": "recommendationUserEntityId",
+            "columnName": "recommendationUserEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recommendationUserPhotoEntityId",
+            "columnName": "recommendationUserPhotoEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "recommendationUserEntityId",
+            "recommendationUserPhotoEntityId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserEntity_RecommendationUserPhotoEntity_recommendationUserEntityId",
+            "unique": false,
+            "columnNames": [
+              "recommendationUserEntityId"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserEntity_RecommendationUserPhotoEntity_recommendationUserEntityId` ON `${TABLE_NAME}` (`recommendationUserEntityId`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserEntity_RecommendationUserJobEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recommendationUserEntityId` TEXT NOT NULL, `recommendationUserJobEntityId` TEXT NOT NULL, PRIMARY KEY(`recommendationUserEntityId`, `recommendationUserJobEntityId`))",
+        "fields": [
+          {
+            "fieldPath": "recommendationUserEntityId",
+            "columnName": "recommendationUserEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recommendationUserJobEntityId",
+            "columnName": "recommendationUserJobEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "recommendationUserEntityId",
+            "recommendationUserJobEntityId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserEntity_RecommendationUserJobEntity_recommendationUserEntityId",
+            "unique": false,
+            "columnNames": [
+              "recommendationUserEntityId"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserEntity_RecommendationUserJobEntity_recommendationUserEntityId` ON `${TABLE_NAME}` (`recommendationUserEntityId`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserEntity_RecommendationUserSchoolEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recommendationUserEntityId` TEXT NOT NULL, `recommendationUserSchoolEntityName` TEXT NOT NULL, PRIMARY KEY(`recommendationUserEntityId`, `recommendationUserSchoolEntityName`))",
+        "fields": [
+          {
+            "fieldPath": "recommendationUserEntityId",
+            "columnName": "recommendationUserEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recommendationUserSchoolEntityName",
+            "columnName": "recommendationUserSchoolEntityName",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "recommendationUserEntityId",
+            "recommendationUserSchoolEntityName"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserEntity_RecommendationUserSchoolEntity_recommendationUserEntityId",
+            "unique": false,
+            "columnNames": [
+              "recommendationUserEntityId"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserEntity_RecommendationUserSchoolEntity_recommendationUserEntityId` ON `${TABLE_NAME}` (`recommendationUserEntityId`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserEntity_RecommendationUserTeaserEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recommendationUserEntityId` TEXT NOT NULL, `recommendationUserTeaserEntityId` TEXT NOT NULL, PRIMARY KEY(`recommendationUserEntityId`, `recommendationUserTeaserEntityId`))",
+        "fields": [
+          {
+            "fieldPath": "recommendationUserEntityId",
+            "columnName": "recommendationUserEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recommendationUserTeaserEntityId",
+            "columnName": "recommendationUserTeaserEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "recommendationUserEntityId",
+            "recommendationUserTeaserEntityId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserEntity_RecommendationUserTeaserEntity_recommendationUserEntityId",
+            "unique": false,
+            "columnNames": [
+              "recommendationUserEntityId"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserEntity_RecommendationUserTeaserEntity_recommendationUserEntityId` ON `${TABLE_NAME}` (`recommendationUserEntityId`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserInstagramEntity_RecommendationUserInstagramPhotoEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recommendationUserInstagramEntityUsername` TEXT NOT NULL, `recommendationUserInstagramPhotoEntityLink` TEXT NOT NULL, PRIMARY KEY(`recommendationUserInstagramEntityUsername`, `recommendationUserInstagramPhotoEntityLink`))",
+        "fields": [
+          {
+            "fieldPath": "recommendationUserInstagramEntityUsername",
+            "columnName": "recommendationUserInstagramEntityUsername",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recommendationUserInstagramPhotoEntityLink",
+            "columnName": "recommendationUserInstagramPhotoEntityLink",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "recommendationUserInstagramEntityUsername",
+            "recommendationUserInstagramPhotoEntityLink"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserInstagramEntity_RecommendationUserInstagramPhotoEntity_recommendationUserInstagramEntityUsername",
+            "unique": false,
+            "columnNames": [
+              "recommendationUserInstagramEntityUsername"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserInstagramEntity_RecommendationUserInstagramPhotoEntity_recommendationUserInstagramEntityUsername` ON `${TABLE_NAME}` (`recommendationUserInstagramEntityUsername`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserPhotoProcessedFileEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`widthPx` INTEGER NOT NULL, `url` TEXT NOT NULL, `heightPx` INTEGER NOT NULL, PRIMARY KEY(`url`))",
+        "fields": [
+          {
+            "fieldPath": "widthPx",
+            "columnName": "widthPx",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "url",
+            "columnName": "url",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "heightPx",
+            "columnName": "heightPx",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "url"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserPhotoProcessedFileEntity_url",
+            "unique": false,
+            "columnNames": [
+              "url"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserPhotoProcessedFileEntity_url` ON `${TABLE_NAME}` (`url`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserPhotoEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `url` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "url",
+            "columnName": "url",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserPhotoEntity_id",
+            "unique": false,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserPhotoEntity_id` ON `${TABLE_NAME}` (`id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserPhotoEntity_RecommendationUserPhotoProcessedFileEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recommendationUserPhotoEntityId` TEXT NOT NULL, `recommendationUserPhotoProcessedFileEntityUrl` TEXT NOT NULL, PRIMARY KEY(`recommendationUserPhotoEntityId`, `recommendationUserPhotoProcessedFileEntityUrl`))",
+        "fields": [
+          {
+            "fieldPath": "recommendationUserPhotoEntityId",
+            "columnName": "recommendationUserPhotoEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recommendationUserPhotoProcessedFileEntityUrl",
+            "columnName": "recommendationUserPhotoProcessedFileEntityUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "recommendationUserPhotoEntityId",
+            "recommendationUserPhotoProcessedFileEntityUrl"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserPhotoEntity_RecommendationUserPhotoProcessedFileEntity_recommendationUserPhotoEntityId",
+            "unique": false,
+            "columnNames": [
+              "recommendationUserPhotoEntityId"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserPhotoEntity_RecommendationUserPhotoProcessedFileEntity_recommendationUserPhotoEntityId` ON `${TABLE_NAME}` (`recommendationUserPhotoEntityId`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserSpotifyThemeTrackArtistEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name` TEXT NOT NULL, `id` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserSpotifyThemeTrackArtistEntity_id",
+            "unique": false,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserSpotifyThemeTrackArtistEntity_id` ON `${TABLE_NAME}` (`id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserSpotifyThemeTrackEntity_RecommendationUserSpotifyThemeTrackArtistEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recommendationUserSpotifyThemeTrackEntityId` TEXT NOT NULL, `recommendationUserSpotifyThemeTrackArtistEntityId` TEXT NOT NULL, PRIMARY KEY(`recommendationUserSpotifyThemeTrackEntityId`, `recommendationUserSpotifyThemeTrackArtistEntityId`))",
+        "fields": [
+          {
+            "fieldPath": "recommendationUserSpotifyThemeTrackEntityId",
+            "columnName": "recommendationUserSpotifyThemeTrackEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recommendationUserSpotifyThemeTrackArtistEntityId",
+            "columnName": "recommendationUserSpotifyThemeTrackArtistEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "recommendationUserSpotifyThemeTrackEntityId",
+            "recommendationUserSpotifyThemeTrackArtistEntityId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserSpotifyThemeTrackEntity_RecommendationUserSpotifyThemeTrackArtistEntity_recommendationUserSpotifyThemeTrackEntityId",
+            "unique": false,
+            "columnNames": [
+              "recommendationUserSpotifyThemeTrackEntityId"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserSpotifyThemeTrackEntity_RecommendationUserSpotifyThemeTrackArtistEntity_recommendationUserSpotifyThemeTrackEntityId` ON `${TABLE_NAME}` (`recommendationUserSpotifyThemeTrackEntityId`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserSpotifyThemeTrackAlbumEntity_RecommendationUserPhotoProcessedFileEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recommendationUserSpotifyThemeTrackAlbumEntityId` TEXT NOT NULL, `recommendationUserPhotoProcessedFileEntityUrl` TEXT NOT NULL, PRIMARY KEY(`recommendationUserSpotifyThemeTrackAlbumEntityId`, `recommendationUserPhotoProcessedFileEntityUrl`))",
+        "fields": [
+          {
+            "fieldPath": "recommendationUserSpotifyThemeTrackAlbumEntityId",
+            "columnName": "recommendationUserSpotifyThemeTrackAlbumEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recommendationUserPhotoProcessedFileEntityUrl",
+            "columnName": "recommendationUserPhotoProcessedFileEntityUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "recommendationUserSpotifyThemeTrackAlbumEntityId",
+            "recommendationUserPhotoProcessedFileEntityUrl"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserSpotifyThemeTrackAlbumEntity_RecommendationUserPhotoProcessedFileEntity_recommendationUserSpotifyThemeTrackAlbumEntityId",
+            "unique": false,
+            "columnNames": [
+              "recommendationUserSpotifyThemeTrackAlbumEntityId"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserSpotifyThemeTrackAlbumEntity_RecommendationUserPhotoProcessedFileEntity_recommendationUserSpotifyThemeTrackAlbumEntityId` ON `${TABLE_NAME}` (`recommendationUserSpotifyThemeTrackAlbumEntityId`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserCommonFriendEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT NOT NULL, `degree` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "degree",
+            "columnName": "degree",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserCommonFriendEntity_id",
+            "unique": false,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserCommonFriendEntity_id` ON `${TABLE_NAME}` (`id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserCommonFriendPhotoEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`small` TEXT NOT NULL, `medium` TEXT NOT NULL, `large` TEXT NOT NULL, PRIMARY KEY(`small`))",
+        "fields": [
+          {
+            "fieldPath": "small",
+            "columnName": "small",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "medium",
+            "columnName": "medium",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "large",
+            "columnName": "large",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "small"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserCommonFriendPhotoEntity_small",
+            "unique": false,
+            "columnNames": [
+              "small"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserCommonFriendPhotoEntity_small` ON `${TABLE_NAME}` (`small`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserCommonFriendEntity_PhotoEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recommendationUserCommonFriendEntityId` TEXT NOT NULL, `recommendationUserCommonFriendPhotoEntitySmall` TEXT NOT NULL, PRIMARY KEY(`recommendationUserCommonFriendEntityId`, `recommendationUserCommonFriendPhotoEntitySmall`))",
+        "fields": [
+          {
+            "fieldPath": "recommendationUserCommonFriendEntityId",
+            "columnName": "recommendationUserCommonFriendEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recommendationUserCommonFriendPhotoEntitySmall",
+            "columnName": "recommendationUserCommonFriendPhotoEntitySmall",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "recommendationUserCommonFriendEntityId",
+            "recommendationUserCommonFriendPhotoEntitySmall"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserCommonFriendEntity_PhotoEntity_recommendationUserCommonFriendEntityId",
+            "unique": false,
+            "columnNames": [
+              "recommendationUserCommonFriendEntityId"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserCommonFriendEntity_PhotoEntity_recommendationUserCommonFriendEntityId` ON `${TABLE_NAME}` (`recommendationUserCommonFriendEntityId`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationLikeEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationLikeEntity_id",
+            "unique": false,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationLikeEntity_id` ON `${TABLE_NAME}` (`id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserJobEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `company_name` TEXT, `title_name` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "company.name",
+            "columnName": "company_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "title.name",
+            "columnName": "title_name",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RecommendationUserJobEntity_id",
+            "unique": false,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_RecommendationUserJobEntity_id` ON `${TABLE_NAME}` (`id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RecommendationUserSchoolEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name` TEXT NOT NULL, `id` TEXT, PRIMARY KEY(`name`))",
+        "fields": [
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "name"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b4927ef260e74c561b1ebb2ac5eda424')"
+    ]
+  }
+}
